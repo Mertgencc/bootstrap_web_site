@@ -1,0 +1,13 @@
+body{
+    background-color: #F8F9FA !important;
+}
+
+nav{
+    background-color: #10002b !important;
+}
+
+nav ul li a{
+    text-transform: uppercase;
+    font-size: small;
+    margin-left: -0.5rem;
+}
