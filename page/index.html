@@ -28,6 +28,170 @@
           object-fit: cover; /* Video'nun uygun şekilde kesilmesini sağlar */
       }
   </style>
+  <style>
+    /* Kategori Kartları */
+    .category-card {
+        position: relative;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .category-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .category-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+        transition: background 0.3s ease;
+    }
+
+    .category-card:hover .category-overlay {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .btn-category {
+        display: inline-block;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 30px;
+        background-color: #ffc107;
+        color: #10002b;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-category:hover {
+        background-color: #ffd54f;
+        color: #0d001a;
+    }
+
+    /* Rastgele Buton Stili */
+    .btn-modern-large {
+        padding: 15px 30px;
+        border-radius: 50px;
+        background-color: #ffc107;
+        color: #10002b;
+        font-size: 1.2rem;
+        font-weight: bold;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+    }
+
+    .btn-modern-large:hover {
+        background-color: #ffd54f;
+        color: #0d001a;
+        transform: translateY(-5px);
+    }
+
+    /* Resim Fade-In */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+</style>
+<style>
+    /* Kategori Kartları */
+    .category-card {
+        position: relative;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .category-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .category-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+        transition: background 0.3s ease;
+    }
+
+    .category-card:hover .category-overlay {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .btn-category {
+        display: inline-block;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 30px;
+        background-color: #ffc107;
+        color: #10002b;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-category:hover {
+        background-color: #ffd54f;
+        color: #0d001a;
+    }
+
+    /* Rastgele Buton Stili */
+    .btn-modern-large {
+        padding: 15px 30px;
+        border-radius: 50px;
+        background-color: #ffc107;
+        color: #10002b;
+        font-size: 1.2rem;
+        font-weight: bold;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+    }
+
+    .btn-modern-large:hover {
+        background-color: #ffd54f;
+        color: #0d001a;
+        transform: translateY(-5px);
+    }
+
+    /* Resim Fade-In */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+</style>    
     
     <style>
         .image-container {
@@ -395,15 +559,92 @@
   </div>
   
 
-  <div class=" text-warning py-5 mt-5" style="background-color: #10002b;">
+  <div class="text-warning py-5 mt-5" style="background-color: #10002b;">
     <div class="container text-center">
         <h1 class="display-4 mb-4 fw-bold">Unique Wallpapers for Every Screen</h1>
         <p class="lead mb-4 fs-4">Discover premium, high-resolution wallpapers for your phone and laptop. Find the perfect background to elevate your screen – download instantly or purchase exclusive designs now!</p>
         <hr class="my-4 border-light" style="width: 50%; margin: auto;">
         <p class="mb-5 fs-5">Explore our diverse collection and transform your screen with stunning wallpapers designed for all tastes.</p>
-        <a href="#" class="btn btn-lg btn-warning text-dark fw-bold px-4 py-2 rounded-pill shadow-sm">Explore & Buy Now</a>
+
+        <!-- Kategori Butonları -->
+        <div class="row text-dark justify-content-center">
+            <div class="col-md-4 mb-4">
+                <div class="category-card" style="background-image: url('/assets/images/DALL·E\ 2025-01-03\ 22.09.13\ -\ A\ vintage-style\ photograph\ of\ a\ serene\ countryside\ landscape\ during\ autumn.\ The\ scene\ features\ a\ rustic\ wooden\ bridge\ over\ a\ quiet\ stream\,\ surrounded\ .webp');">
+                    <div class="category-overlay">
+                        <h3>Vintage</h3>
+                        <a href="/page/vintage_free_page.html" class="btn-category">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="category-card" style="background-image: url('/assets/images/DALL·E\ 2025-01-03\ 22.11.33\ -\ A\ surrealist-style\ artwork\ depicting\ a\ dreamlike\ landscape\,\ featuring\ floating\ islands\ in\ a\ sky\ with\ vivid\ colors\,\ a\ giant\ clock\ melting\ over\ one\ of\ t.webp');">
+                    <div class="category-overlay">
+                        <h3>Surrealism</h3>
+                        <a href="/page/surrealist_free_page.html" class="btn-category">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="category-card" style="background-image: url('/assets/images/Gemini_Generated_Image_nc440qnc440qnc44.jpeg');">
+                    <div class="category-overlay">
+                        <h3>Minimalism</h3>
+                        <a href="/page/Minimalist_free_page.html" class="btn-category">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="category-card" style="background-image: url('/assets/images/Gemini_Generated_Image_3ng81w3ng81w3ng8.jpeg');">
+                    <div class="category-overlay">
+                        <h3>Decoration</h3>
+                        <a href="/page/decoration_free_page.html" class="btn-category">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="category-card" style="background-image: url('/assets/images/Gemini_Generated_Image_lr3fqblr3fqblr3f.jpeg');">
+                    <div class="category-overlay">
+                        <h3>Poster</h3>
+                        <a href="/page/poster_free_page.html" class="btn-category">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="category-card" style="background-image: url('/assets/images/Gemini_Generated_Image_9vp3oh9vp3oh9vp3.jpeg');">
+                    <div class="category-overlay">
+                        <h3>Graffiti</h3>
+                        <a href="/page/graffiti_free_page.html" class="btn-category">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rastgele Resim Butonu -->
+        <div class="mt-5">
+            <button onclick="showRandomImage()" class="btn-modern-large">
+                Your Dream
+            </button>
+            <div id="randomImageContainer" class="mt-4"></div>
+        </div>
     </div>
 </div>
+
+<script>
+    function showRandomImage() {
+        const images = [
+            '/assets/images/pexels-eduardo-gonzalez-224803592-29100705 (1).jpg',
+            '/assets/images/pexels-criativapix-17225771.jpg',
+            '/assets/images/pexels-kayaartss-20889610.jpg',
+            '/assets/images/pexels-lunariomus-11883258.jpg',
+            '/assets/images/pexels-angelramflow-28939042.jpg'
+        ];
+        const randomImage = images[Math.floor(Math.random() * images.length)];
+        const container = document.getElementById('randomImageContainer');
+        container.innerHTML = `<img src="${randomImage}" alt="Random Wallpaper" style="max-width: 25%; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); animation: fadeIn 1s ease-in-out;">`;
+    }
+</script>
+
+
+
 
 <div class="container mt-5">
   <div class="d-flex align-items-start mb-4">
@@ -483,7 +724,10 @@
   </div>
   
   
-
+<!-- Footer Section -->
+<footer class="text-center py-4" style="background-color: #f1f1f1;">
+    <p>&copy; 2025 Vintage Collection | All Rights Reserved</p>
+  </footer>
 
 
     <script

@@ -14,199 +14,91 @@
     <link rel="icon" href="/assets/images/W (1).png" type="image/x-icon" />
   </head>
   <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-light pt-1 pb-1 navbar fixed-top"
-    >
+    <nav style="background-color: #10002b;" class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a
-          style="color: #10002b"
-          class="navbar-brand text-uppercase font-weight-bold"
-          href="/page/index.html"
-          >World Of Wallpapers</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          style="z-index: 1"
-          class="collapse navbar-collapse"
-          id="navbarSupportedContent"
-        >
-          <form style="margin-left: 35rem" class="form-inline my-2 my-lg-0">
-            <input
-              style="border-radius: 5rem"
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button
-              style="border-radius: 5rem; border-color: #10002b; color: #10002b"
-              class="btn btn-outline-primary my-2 my-sm-0"
-              type="submit"
-            >
-              Search
-            </button>
-          </form>
-        </div>
+          <a class="navbar-brand font-weight-bold" href="#">World Of Wallpapers</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto ">
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="vintageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          VINTAGE
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="vintageDropdown">
+                          <a class="dropdown-item" href="/page/vintage_description_page.html">Description</a>
+                          <a class="dropdown-item" href="/page/vintage_free_page.html">Free Vintage Picture</a>
+                          <a class="dropdown-item" href="/page/vintage_seemore_page.html">See More</a>
+                      </div>
+                  </li>
+  
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="surrealistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          SURREALIST
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="surrealistDropdown">
+                          <a class="dropdown-item" href="/page/surrealist_description_page.html">Description</a>
+                          <a class="dropdown-item" href="/page/surrealist_free_page.html">Free Surrealist Picture</a>
+                          <a class="dropdown-item" href="/page/surrealist_seemore_page.html">See More</a>
+                      </div>
+                  </li>
+  
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="minimalistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          MINIMALIST
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="minimalistDropdown">
+                          <a class="dropdown-item" href="/page/Minimalist_description_page.html">Description</a>
+                          <a class="dropdown-item" href="/page/Minimalist_free_page.html">Free Minimalist Picture</a>
+                          <a class="dropdown-item" href="/page/Minimalist_seemore_page.html">See More</a>
+                      </div>
+                  </li>
+  
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="decorationDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          DECORATION
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="decorationDropdown">
+                          <a class="dropdown-item" href="#">Description</a>
+                          <a class="dropdown-item" href="#">Free Decoration Picture</a>
+                          <a class="dropdown-item" href="#">See More</a>
+                      </div>
+                  </li>
+  
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="posterDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          POSTER
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="posterDropdown">
+                          <a class="dropdown-item" href="#">Description</a>
+                          <a class="dropdown-item" href="#">Free Poster Picture</a>
+                          <a class="dropdown-item" href="#">See More</a>
+                      </div>
+                  </li>
+  
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="graffitiDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          GRAFFITI
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="graffitiDropdown">
+                          <a class="dropdown-item" href="#">Description</a>
+                          <a class="dropdown-item" href="#">Free Graffiti Picture</a>
+                          <a class="dropdown-item" href="#">See More</a>
+                      </div>
+                  </li>
+  
+                  <li class="nav-item">
+                      <form class="form-inline my-2 my-lg-0 ml-3">
+                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="border-radius: 20px; width: 200px;" />
+                          <button style="border-color: whitesmoke; color: whitesmoke; border-radius: 2rem;" class="btn  my-2 my-sm-0" type="submit" style="border-radius: 20px; border-color: #10002b; color: #10002b;">Search</button>
+                      </form>
+                  </li>
+              </ul>
+          </div>
       </div>
-    </nav>
-
-    <nav
-      style="margin-top: 3rem"
-      class="navbar navbar-expand-lg navbar-light pb-0 pt-0 navbar fixed-top"
-    >
-      <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <div style="margin-left: -0.7rem" class="dropdown">
-              <button
-                style="color: #f8f9fa"
-                class="btn btn dropdown-toggle disabled"
-                type="button"
-                data-toggle="dropdown"
-                aria-expanded="false"
-              >
-                VINTAGE
-              </button>
-              <div class="dropdown-menu">
-                <a
-                  class="dropdown-item"
-                  href="/page/vintage_description_page.html"
-                  >Description</a
-                >
-                <a class="dropdown-item" href="/page/vintage_free_page.html"
-                  >Free Vintage Picture</a
-                >
-                <a class="dropdown-item" href="/page/vintage_seemore_page.html"
-                  >See More</a
-                >
-              </div>
-            </div>
-            <div style="margin-left: 5rem" class="dropdown">
-              <button
-                style="color: #f8f9fa"
-                class="btn btn dropdown-toggle"
-                type="button"
-                data-toggle="dropdown"
-                aria-expanded="false"
-              >
-                SURREALIST
-              </button>
-              <div class="dropdown-menu">
-                <a
-                  class="dropdown-item"
-                  href="/page/surrealist_description_page.html"
-                  >Description</a
-                >
-                <a class="dropdown-item" href="/page/surrealist_free_page.html"
-                  >Free Sürrealist Picture</a
-                >
-                <a
-                  class="dropdown-item"
-                  href="/page/surrealist_seemore_page.html"
-                  >See More</a
-                >
-              </div>
-            </div>
-            <div style="margin-left: 5rem" class="dropdown">
-              <button
-                style="color: #f8f9fa"
-                class="btn btn dropdown-toggle disabled"
-                type="button"
-                data-toggle="dropdown"
-                aria-expanded="false"
-              >
-                MINIMALIST
-              </button>
-              <div class="dropdown-menu">
-                <a
-                  class="dropdown-item"
-                  href="/page/Minimalist_description_page.html"
-                  >Description</a
-                >
-                <a class="dropdown-item" href="/page/Minimalist_free_page.html"
-                  >Free Minimalist Picture</a
-                >
-                <a
-                  class="dropdown-item"
-                  href="/page/Minimalist_seemore_page.html.html"
-                  >See More</a
-                >
-              </div>
-            </div>
-            <div style="margin-left: 5rem" class="dropdown">
-              <button
-                style="color: #f8f9fa"
-                class="btn btn dropdown-toggle disabled"
-                type="button"
-                data-toggle="dropdown"
-                aria-expanded="false"
-              >
-                DECORATION
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Description</a>
-                <a class="dropdown-item" href="#">Free Decoration Picture</a>
-                <a class="dropdown-item" href="#">See More</a>
-              </div>
-            </div>
-            <div style="margin-left: 5rem" class="dropdown">
-              <button
-                style="color: #f8f9fa"
-                class="btn btn dropdown-toggle disabled"
-                type="button"
-                data-toggle="dropdown"
-                aria-expanded="false"
-              >
-                POSTER
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Description</a>
-                <a class="dropdown-item" href="#">Free Poster Picture</a>
-                <a class="dropdown-item" href="#">See More</a>
-              </div>
-            </div>
-            <div style="margin-left: 5rem" class="dropdown">
-              <button
-                style="color: #f8f9fa"
-                class="btn btn dropdown-toggle disabled"
-                type="button"
-                data-toggle="dropdown"
-                aria-expanded="false"
-              >
-                GRAFFITI
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Description</a>
-                <a class="dropdown-item" href="#">Free Graffiti Picture</a>
-                <a class="dropdown-item" href="#">See More</a>
-              </div>
-            </div>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  </nav>
 
     <div class="container mt-5">
       <img 
@@ -215,6 +107,58 @@
         alt="..."
       />
     </div>
+
+    <section class="hero-section text-center" style="background-image: url('assets/images/vintage-background.jpg'); background-size: cover; height: 1vh;">
+        <div class="container">
+          <a href="#vintage-items" class="btn btn-lg btn-outline-light">Explore Vintage</a>
+        </div>
+      </section>
+    
+      <!-- Vintage Highlights Section -->
+      <div id="vintage-items" class="container py-5">
+        <h2 class="text-center mb-4" style="font-family: 'Georgia', serif; color: #9c6e43;">Classic Sürrealist Collections</h2>
+        <p class="lead text-center text-muted mb-5">Explore the elegance, creativity, and history that define the vintage era through carefully selected collections.</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Vintage Item 1 -->
+          <div class="col">
+            <div class="card border-0 shadow-lg rounded-4 vintage-card">
+              <img src="/assets/images/Gemini_Generated_Image_vuu5npvuu5npvuu5.jpeg" class="card-img-top rounded-4" alt="Vintage Item 1">
+              <div class="card-body text-center p-4">
+                <h5 class="card-title text-uppercase fw-bold" style="color: #6f4f29;">Antique Furniture</h5>
+                <p class="card-text text-muted">These timeless pieces tell the stories of eras long past, adding a touch of history and class to any space.</p>
+                <a href="#" class="btn btn-vintage">See More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Vintage Item 2 -->
+          <div class="col">
+            <div class="card border-0 shadow-lg rounded-4 vintage-card">
+              <img src="/assets/images/Gemini_Generated_Image_9vp3oh9vp3oh9vp3.jpeg" class="card-img-top rounded-4" alt="Vintage Item 2">
+              <div class="card-body text-center p-4">
+                <h5 class="card-title text-uppercase fw-bold" style="color: #6f4f29;">Retro Fashion</h5>
+                <p class="card-text text-muted">From the elegance of vintage dresses to the charm of tailored suits, these designs have withstood the test of time.</p>
+                <a href="#" class="btn btn-vintage">Explore the Collection</a>
+              </div>
+            </div>
+          </div>
+          <!-- Vintage Item 3 -->
+          <div class="col">
+            <div class="card border-0 shadow-lg rounded-4 vintage-card">
+              <img src="/assets/images/Gemini_Generated_Image_lr3fqblr3fqblr3f.jpeg" class="card-img-top rounded-4" alt="Vintage Item 3">
+              <div class="card-body text-center p-4">
+                <h5 class="card-title text-uppercase fw-bold" style="color: #6f4f29;">Retro Art</h5>
+                <p class="card-text text-muted">Bold and unique, retro art brings personality and a touch of nostalgia to any environment with its vibrant visuals.</p>
+                <a href="#" class="btn btn-vintage">Discover More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Footer Section -->
+      <footer class="text-center py-4" style="background-color: #f1f1f1;">
+        <p>&copy; 2025 Vintage Collection | All Rights Reserved</p>
+      </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
