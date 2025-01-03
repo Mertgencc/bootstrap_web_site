@@ -11,6 +11,7 @@
         crossorigin="anonymous" />
 
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/js/login.js">
     <link rel="icon" href="/assets/images/W (1).png" type="image/x-icon" />
     <style>
       .video-container {
@@ -50,185 +51,97 @@
 
 </head>
 <body style="background-color: #F8F9FA">
-    <script>
-        // Sayfaya geldiğinde hoşgeldiniz mesajı gösterilecek
-        window.onload = function() {
-            alert("Hoşgeldiniz! Başarıyla giriş yaptınız.");
-        };
-
-        // Geri dönme butonu
-        function goBack() {
-            window.history.back(); // Kullanıcıyı bir önceki sayfaya yönlendirir
-        }
-    </script>
-    <nav
-        class="navbar navbar-expand-lg navbar-light bg-light pt-1 pb-1 navbar fixed-top">
+    
+    <nav style="background-color: #10002b;" class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a
-                style="color: #10002b; margin-top: 0.2rem"
-                class="navbar-brand text-uppercase font-weight-bold"
-                href="#">World Of Wallpapers</a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+            <a class="navbar-brand font-weight-bold" href="#">World Of Wallpapers</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div
-                style="z-index: 1; margin-top: 0.2rem"
-                class="collapse navbar-collapse"
-                id="navbarSupportedContent">
-                <form style="margin-left: 33rem" class="form-inline my-2 my-lg-0">
-                    <input
-                        style="border-radius: 5rem"
-                        class="form-control mr-sm-2"
-                        type="search"
-                        placeholder="Search"
-                        aria-label="Search" />
-                    <button
-                        style="border-radius: 5rem; border-color: #10002b; color: #10002b; margin-top: 1rem"
-                        class="btn btn-outline-primary my-2 my-sm-0"
-                        type="submit">
-                        Search
-                    </button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-    <nav
-        style="margin-top: 3.3rem; background-color: #10002b"
-        class="navbar navbar-expand-lg navbar-light pb-0 pt-0 navbar fixed-top">
-        <div class="container">
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <div style="margin-left: -0.7rem" class="dropdown">
-                        <button
-                            style="color: #f8f9fa"
-                            class="btn btn dropdown-toggle"
-                            type="button"
-                            data-toggle="dropdown"
-                            aria-expanded="false">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="vintageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             VINTAGE
-                        </button>
-                        <div class="dropdown-menu">
-                            <a
-                                class="dropdown-item"
-                                href="/vintage_description_page.html">Description</a>
-                            <a
-                                class="dropdown-item"
-                                href="vintage_free_picture.aspx">Free Vintage Picture</a>
-                            <a
-                                class="dropdown-item"
-                                href="/page/vintage_seemore_page.html">See More</a>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="vintageDropdown">
+                            <a class="dropdown-item" href="/page/vintage_description_page.html">Description</a>
+                            <a class="dropdown-item" href="/page/vintage_free_page.html">Free Vintage Picture</a>
+                            <a class="dropdown-item" href="/page/vintage_seemore_page.html">See More</a>
                         </div>
-                    </div>
-                    <div style="margin-left: 5rem" class="dropdown">
-                        <button
-                            style="color: #f8f9fa"
-                            class="btn btn dropdown-toggle"
-                            type="button"
-                            data-toggle="dropdown"
-                            aria-expanded="false">
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="surrealistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             SURREALIST
-                        </button>
-                        <div class="dropdown-menu">
-                            <a
-                                class="dropdown-item"
-                                href="/page/surrealist_description_page.html">Description</a>
-                            <a
-                                class="dropdown-item"
-                                href="/page/surrealist_free_page.html">Free Sürrealist Picture</a>
-                            <a
-                                class="dropdown-item"
-                                href="/page/surrealist_seemore_page.html">See More</a>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="surrealistDropdown">
+                            <a class="dropdown-item" href="/page/surrealist_description_page.html">Description</a>
+                            <a class="dropdown-item" href="/page/surrealist_free_page.html">Free Surrealist Picture</a>
+                            <a class="dropdown-item" href="/page/surrealist_seemore_page.html">See More</a>
                         </div>
-                    </div>
-                    <div style="margin-left: 5rem" class="dropdown">
-                        <button
-                            style="color: #f8f9fa"
-                            class="btn btn dropdown-toggle"
-                            type="button"
-                            data-toggle="dropdown"
-                            aria-expanded="false">
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="minimalistDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             MINIMALIST
-                        </button>
-                        <div class="dropdown-menu">
-                            <a
-                                class="dropdown-item"
-                                href="/page/Minimalist_description_page.html">Description</a>
-                            <a
-                                class="dropdown-item"
-                                href="/page/Minimalist_free_page.html">Free Minimalist Picture</a>
-                            <a
-                                class="dropdown-item"
-                                href="/page/Minimalist_seemore_page.html.html">See More</a>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="minimalistDropdown">
+                            <a class="dropdown-item" href="/page/Minimalist_description_page.html">Description</a>
+                            <a class="dropdown-item" href="/page/Minimalist_free_page.html">Free Minimalist Picture</a>
+                            <a class="dropdown-item" href="/page/Minimalist_seemore_page.html">See More</a>
                         </div>
-                    </div>
-                    <div style="margin-left: 5rem" class="dropdown">
-                        <button
-                            style="color: #f8f9fa"
-                            class="btn btn dropdown-toggle"
-                            type="button"
-                            data-toggle="dropdown"
-                            aria-expanded="false">
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="decorationDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             DECORATION
-                        </button>
-                        <div class="dropdown-menu">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="decorationDropdown">
                             <a class="dropdown-item" href="#">Description</a>
                             <a class="dropdown-item" href="#">Free Decoration Picture</a>
                             <a class="dropdown-item" href="#">See More</a>
                         </div>
-                    </div>
-                    <div style="margin-left: 5rem" class="dropdown">
-                        <button
-                            style="color: #f8f9fa"
-                            class="btn btn dropdown-toggle"
-                            type="button"
-                            data-toggle="dropdown"
-                            aria-expanded="false">
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="posterDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             POSTER
-                        </button>
-                        <div class="dropdown-menu">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="posterDropdown">
                             <a class="dropdown-item" href="#">Description</a>
                             <a class="dropdown-item" href="#">Free Poster Picture</a>
                             <a class="dropdown-item" href="#">See More</a>
                         </div>
-                    </div>
-                    <div style="margin-left: 5rem" class="dropdown">
-                        <button
-                            style="color: #f8f9fa"
-                            class="btn btn dropdown-toggle"
-                            type="button"
-                            data-toggle="dropdown"
-                            aria-expanded="false">
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="graffitiDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             GRAFFITI
-                        </button>
-                        <div class="dropdown-menu">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="graffitiDropdown">
                             <a class="dropdown-item" href="#">Description</a>
                             <a class="dropdown-item" href="#">Free Graffiti Picture</a>
                             <a class="dropdown-item" href="#">See More</a>
                         </div>
-                    </div>
+                    </li>
+    
+                    <li class="nav-item">
+                        <form class="form-inline my-2 my-lg-0 ml-3">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="border-radius: 20px; width: 200px;" />
+                            <button style="border-color: whitesmoke; color: whitesmoke; border-radius: 2rem;" class="btn  my-2 my-sm-0" type="submit" style="border-radius: 20px; border-color: #10002b; color: #10002b;">Search</button>
+                        </form>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+    
+    <!-- Bootstrap JS ve diğer bağımlılıklar -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    
 
     <div class="container mt-5">
         <img
@@ -564,7 +477,7 @@
       <!-- Butonlar -->
       <div class="text-center mt-5">
         <a href="/page/signUp.html" class="btn btn-lg px-4 py-2 text-dark" style="background-color: #FFD750;">SIGN UP</a>
-        <a href="#" class="btn btn-lg px-4 py-2 text-dark ms-3" style="background-color: #FFD750;">LOGIN</a>
+        <a href="/page/login.html" class="btn btn-lg px-4 py-2 text-dark ms-3" style="background-color: #FFD750;">LOGIN</a>
       </div>
     </div>
   </div>

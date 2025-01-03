@@ -11,3 +11,8 @@ nav ul li a{
     font-size: small;
     margin-left: -0.5rem;
 }
+
+.col:hover{
+    transform: scale(1.03);
+    box-shadow: #10002b;
+}
