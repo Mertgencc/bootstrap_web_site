@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beğenilmeyen Ürünler</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    h2 {
+      color: #dc3545;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-img-top {
+      border-radius: 15px 15px 0 0;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .btn-danger {
+      margin-top: 10px;
+      background-color: #dc3545;
+      border: none;
+    }
+
+    .btn-danger:hover {
+      background-color: #a71d2a;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .mb-4 {
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container py-5">
+    <h2 class="text-center">Beğenilmeyen Ürünler</h2>
+    <div class="row" id="dislikedProducts">
+      <!-- Beğenilmeyen ürünler burada gösterilecek -->
+    </div>
+  </div>
+
+  <script>
+    // Beğenilmeyen ürünleri göster
+    document.addEventListener("DOMContentLoaded", function() {
+      const dislikedImages = JSON.parse(localStorage.getItem("dislikedImages")) || [];
+      const dislikedProductsContainer = document.getElementById("dislikedProducts");
+      
+      dislikedImages.forEach((imagePath, index) => {
+        const col = document.createElement("div");
+        col.classList.add("col-md-3", "mb-4");
+        col.innerHTML = `
+          <div class="card shadow-sm border-0">
+            <img src="${imagePath}" class="card-img-top" alt="Beğenilmeyen Ürün" style="object-fit: cover; height: 200px;">
+            <div class="card-body text-center">
+              <h5 class="card-title">Beğenilmeyen Ürün</h5>
+              <button class="btn btn-danger" onclick="removeProduct(${index})">Sil</button>
+            </div>
+          </div>
+        `;
+        dislikedProductsContainer.appendChild(col);
+      });
+    });
+
+    // Ürünü silme işlemi
+    function removeProduct(index) {
+      let dislikedImages = JSON.parse(localStorage.getItem("dislikedImages")) || [];
+      dislikedImages.splice(index, 1); // Seçilen ürünü diziden çıkar
+      localStorage.setItem("dislikedImages", JSON.stringify(dislikedImages)); // Güncellenmiş diziyi kaydet
+      location.reload(); // Sayfayı yenileyerek değişiklikleri göster
+    }
+  </script>
+</body>
+</html>
