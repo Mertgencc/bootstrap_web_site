@@ -3,14 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beğenilen Resimler</title>
+  <title>Favorite Images</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+      rel="icon"
+      href="/assets/images/DALL·E 2025-01-04 14.49.48 - A modern and minimalist logo design for 'Walltopia', a wallpaper website. The logo features a sleek, sans-serif font with the word 'Walltopia' in bold.webp"
+      type="image/x-icon"
+    />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #10002b;
+      padding-top: 56px; /* Navbar çakışmasını önlemek için */
+      background-color: #F8F9FA;
       color: white;
-      padding: 20px;
     }
+    footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #10002b;
+    text-align: center;
+    padding: 10px 0;
+}
+
+    
     h1 {
       color: #ffd750;
       text-align: center;
@@ -43,6 +64,19 @@
     .image-box p {
       color: white;
     }
+    .delete-button {
+      background-color: #dc3545;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .delete-button:hover {
+      background-color: #c82333;
+    }
     .back-button {
       background-color: #28a745;
       color: white;
@@ -62,13 +96,217 @@
   </style>
 </head>
 <body>
-  <h1>Beğenilen Resimler</h1>
+  <!-- Navbar -->
+    <nav
+      style="background-color: #10002b"
+      class="navbar navbar-expand-lg navbar-dark fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand font-weight-bold" href="#">Walltopia</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="vintageDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                VINTAGE
+              </a>
+              <div class="dropdown-menu" aria-labelledby="vintageDropdown">
+                <a
+                  class="dropdown-item"
+                  href="/page/vintage_description_page.html"
+                  >Description</a
+                >
+                <a class="dropdown-item" href="/page/vintage_free_page.html"
+                  >Free Vintage Picture</a
+                >
+                <a class="dropdown-item" href="/page/vintage_seemore_page.html"
+                  >See More</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="surrealistDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                SURREALIST
+              </a>
+              <div class="dropdown-menu" aria-labelledby="surrealistDropdown">
+                <a
+                  class="dropdown-item"
+                  href="/page/surrealist_description_page.html"
+                  >Description</a
+                >
+                <a class="dropdown-item" href="/page/surrealist_free_page.html"
+                  >Free Surrealist Picture</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="/page/surrealist_seemore_page.html"
+                  >See More</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="minimalistDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                MINIMALIST
+              </a>
+              <div class="dropdown-menu" aria-labelledby="minimalistDropdown">
+                <a
+                  class="dropdown-item"
+                  href="/page/Minimalist_description_page.html"
+                  >Description</a
+                >
+                <a class="dropdown-item" href="/page/Minimalist_free_page.html"
+                  >Free Minimalist Picture</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="/page/Minimalist_seemore_page.html"
+                  >See More</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="decorationDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                DECORATION
+              </a>
+              <div class="dropdown-menu" aria-labelledby="decorationDropdown">
+                <a class="dropdown-item" href="#">Description</a>
+                <a class="dropdown-item" href="#">Free Decoration Picture</a>
+                <a class="dropdown-item" href="#">See More</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="posterDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                POSTER
+              </a>
+              <div class="dropdown-menu" aria-labelledby="posterDropdown">
+                <a class="dropdown-item" href="#">Description</a>
+                <a class="dropdown-item" href="#">Free Poster Picture</a>
+                <a class="dropdown-item" href="#">See More</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="graffitiDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                GRAFFITI
+              </a>
+              <div class="dropdown-menu" aria-labelledby="graffitiDropdown">
+                <a class="dropdown-item" href="#">Description</a>
+                <a class="dropdown-item" href="#">Free Graffiti Picture</a>
+                <a class="dropdown-item" href="#">See More</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <form
+                class="form-inline my-2 my-lg-0 ml-3"
+                onsubmit="searchPage(event)"
+              >
+                <input
+                  id="searchInput"
+                  class="form-control mr-sm-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                  style="border-radius: 20px; width: 200px"
+                />
+                <button
+                  style="
+                    border-color: whitesmoke;
+                    color: whitesmoke;
+                    border-radius: 2rem;
+                  "
+                  class="btn my-2 my-sm-0"
+                  type="submit"
+                >
+                  Search
+                </button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-3 mb-3">
+      <img
+        src="/assets/images/World Of Wallpapers (18).png"
+        class="img-fluid mt-5"
+        alt="..."
+      />
+    </div>
 
   <div class="image-container" id="likes-list">
     <!-- Beğenilen resimler buraya eklenecek -->
   </div>
 
-  <button class="back-button" onclick="window.history.back()">Geri Dön</button>
+  <button class="back-button" onclick="window.history.back()">Come Back To Home Page</button>
+
+  <!-- Bootstrap JS ve Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
     // Beğenilen resimleri localStorage'dan al
@@ -82,9 +320,8 @@
         const imageBox = document.createElement("div");
         imageBox.classList.add("image-box");
 
-        // Resim ve açıklama ekleyin
         const image = document.createElement("img");
-        image.src = `/assets/images/${imageName}.jpg`; // Beğenilen resmin yolunu buraya koyun
+        image.src = `/assets/images/${imageName}.jpg`;
         imageBox.appendChild(image);
 
         const title = document.createElement("h5");
@@ -95,11 +332,42 @@
         description.textContent = "Bu popüler resmin açıklaması burada yer alacak.";
         imageBox.appendChild(description);
 
+        const deleteButton = document.createElement("button");
+        deleteButton.classList.add("delete-button");
+        deleteButton.textContent = "Sil";
+        deleteButton.onclick = () => {
+          likes = likes.filter((like) => like !== imageName);
+          localStorage.setItem("likes", JSON.stringify(likes));
+          likesList.removeChild(imageBox);
+          if (likes.length === 0) {
+            likesList.innerHTML = "<p style='color:white;'>Henüz beğenilen resim yok.</p>";
+          }
+        };
+        imageBox.appendChild(deleteButton);
+
         likesList.appendChild(imageBox);
       });
     } else {
       likesList.innerHTML = "<p style='color:white;'>Henüz beğenilen resim yok.</p>";
     }
   </script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+  integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+  crossorigin="anonymous"
+></script>
+  <footer class="text-center py-4" style="background-color: #f1f1f1">
+    <p>&copy; 2025 Vintage Collection | All Rights Reserved</p>
+  </footer>
 </body>
 </html>

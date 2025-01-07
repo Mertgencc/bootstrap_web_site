@@ -25,40 +25,46 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
         return;
     }
 
-    fetch("data1.json")
-        .then(response => response.json())
-        .then(users => {
-            // Kullanıcıyı e-posta adresine göre kontrol et
-            const userExists = users.some(user => user.email === email);
+    // Rastgele bir kullanıcı oluşturmak için aşağıdaki fonksiyon kullanılıyor
+    const randomUser = generateRandomUser();
 
-            if (userExists) {
-                feedback.textContent = "Bu e-posta adresi zaten kayıtlı!";
-                feedback.style.display = "block";
-                feedback.style.backgroundColor = "#f8d7da";
-                feedback.style.color = "#721c24";
-            } else {
-                // Yeni kullanıcı ekle
-                const newUser = { id: users.length + 1, name, surname, email, password };
-                users.push(newUser);
+    // Kullanıcıyı e-posta adresine göre kontrol et
+    if (randomUser.email === email) {
+        feedback.textContent = "Bu e-posta adresi zaten kayıtlı!";
+        feedback.style.display = "block";
+        feedback.style.backgroundColor = "#f8d7da";
+        feedback.style.color = "#721c24";
+    } else {
+        // Yeni kullanıcıyı JSON verilerine ekle
+        const newUser = { id: randomUser.id, name, surname, email, password };
+        
+        feedback.textContent = "Kayıt başarılı! Ana sayfaya yönlendiriliyorsunuz...";
+        feedback.style.display = "block";
+        feedback.style.backgroundColor = "#d4edda";
+        feedback.style.color = "#155724";
 
-                feedback.textContent = "Kayıt başarılı! Ana sayfaya yönlendiriliyorsunuz...";
-                feedback.style.display = "block";
-                feedback.style.backgroundColor = "#d4edda";
-                feedback.style.color = "#155724";
+        console.log("Yeni kullanıcı kaydedildi:", newUser);
 
-                // JSON dosyasına yeni kullanıcıyı kaydetme işlemi (gerçek uygulamada backend kullanılır)
-                console.log("Yeni kullanıcı kaydedildi:", newUser);
-
-                // Kayıt işleminden sonra yönlendirme
-                setTimeout(() => {
-                    window.location.href = "index.html"; // Ana sayfaya yönlendirme
-                }, 2000);
-            }
-        })
-        .catch(error => {
-            feedback.textContent = "Bir hata oluştu: " + error.message;
-            feedback.style.display = "block";
-            feedback.style.backgroundColor = "#f8d7da";
-            feedback.style.color = "#721c24";
-        });
+        // Kayıt işleminden sonra yönlendirme
+        setTimeout(() => {
+            window.location.href = "index.html"; // Ana sayfaya yönlendirme
+        }, 2000);
+    }
 });
+
+// Rastgele kullanıcı verisi oluşturma fonksiyonu
+function generateRandomUser() {
+    const randomId = Math.floor(Math.random() * 1000) + 1;
+    const randomNames = ["Ahmet", "Mehmet", "Zeynep", "Fatma", "Ali", "Ayşe", "Murat", "Emre", "Meryem", "Seda"];
+    const randomSurnames = ["Yılmaz", "Kaya", "Demir", "Çelik", "Arslan", "Erdem", "Büyük", "Balcı", "Güzel", "Öztürk"];
+    const randomEmails = ["example@mail.com", "user@domain.com", "random@mail.net", "email@example.org"];
+    const randomPassword = "password" + Math.floor(Math.random() * 1000);
+
+    return {
+        id: randomId,
+        name: randomNames[Math.floor(Math.random() * randomNames.length)],
+        surname: randomSurnames[Math.floor(Math.random() * randomSurnames.length)],
+        email: randomEmails[Math.floor(Math.random() * randomEmails.length)],
+        password: randomPassword
+    };
+}
