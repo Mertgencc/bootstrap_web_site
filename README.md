@@ -7,6 +7,10 @@ The project focuses on performance, clean design, and an intuitive user experien
 
 - It is built using a lightweight and efficient structure with JSON-based data management and Bootstrap-powered UI design.
 
+<img width="1302" height="626" alt="image" src="https://github.com/user-attachments/assets/d7a054cd-dd33-49d1-81c9-9327d5cd880a" />
+<img width="1299" height="626" alt="image" src="https://github.com/user-attachments/assets/654fb98d-0093-4e79-8e79-4ead9b3c225a" />
+
+
 ### **🚀 Features**
 
 - 🎨 High-resolution wallpaper collection
